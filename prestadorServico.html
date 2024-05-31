@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="assets/styles/style.css">
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
   <meta name="author" content="@Feh Santos">
-  <title>Paciente</title>
+  <title>Prestador de Serviço </title>
 </head>
 
 <body>
 
   <div class="container">
     <div class="header">
-      <span>Cadastro de Paciente</span>
+      <span>Cadastro do Prestador de Serviço</span>
       <button onclick="openModal()" id="new">Incluir</i></button>
     </div>
 
@@ -23,12 +23,14 @@
       <table>
         <thead>
           <tr>
-            <th>Paciente</th>
+            <th>Nome</th>
             <th>CPF</th>
             <th>RG</th>
+            <th>CRO</th>
+            <th>Razão Social</th>
+            <th>CNPJ</th>
             <th>Telefone</th>
             <th>Endereço</th>
-            <th>Ficha Anamnese</th>
             <th class="acao">Editar</th>
             <th class="acao">Excluir</th>
           </tr>
@@ -41,8 +43,8 @@
     <div class="modal-container">
       <div class="modal">
         <form>
-          <label for="m-paciente">Paciente</label>
-          <input id="m-paciente" type="text" required />
+          <label for="m-medico">Nome</label>
+          <input id="m-medico" type="text" required />
 
           <label for="m-cpf">CPF</label>
           <input id="m-cpf" type="number" required />
@@ -50,14 +52,20 @@
           <label for="m-rg">RG</label>
           <input id="m-rg" type="number" required />
 
+          <label for="m-cro">CRO</label>
+          <input id="m-cro" type="number" required />
+
+          <label for="m-razao_social">Razão Social</label>
+          <input id="m-razao_social" type="text" required />
+
+          <label for="m-cnpj">CNPJ</label>
+          <input id="m-cnpj" type="number" required />
+
           <label for="m-telefone">Telefone</label>
           <input id="m-telefone" type="number" required />
 
           <label for="m-endereco">Endereço</label>
           <input id="m-endereco" type="text" required />
-
-          <label for="m-ficha_anamnese">Ficha Anamnese</label>
-          <input id="m-ficha_anamnese" type="text" required />
 
           <button id="btnSalvar">Salvar</button>
         </form>
@@ -65,7 +73,7 @@
     </div>
 
   </div>
-  <script src="scripts/paciente.js"></script>
+  <script src="scripts/prestadoServico.js"></script>
 
 </body>
 
