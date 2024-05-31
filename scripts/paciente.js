@@ -2,7 +2,7 @@ fetch("http://localhost:3000/api/paciente");
 
 const modal = document.querySelector(".modal-container");
 const tbody = document.querySelector("tbody");
-const sNome = document.querySelector("#m-nome");
+const sNome = document.querySelector("#m-paciente");
 const sCpf = document.querySelector("#m-cpf");
 const sRg = document.querySelector("#m-rg");
 const sTelefone = document.querySelector("#m-telefone");
@@ -90,7 +90,7 @@ btnSalvar.onclick = async (e) => {
     rg: sRg.value,
     telefone: sTelefone.value,
     endereco: sEndereco.value,
-    ficha_anamnese: sFicha_Anamnese.value, // Adicione este campo se for obrigatório no backend
+    ficha_anamnese: sFicha_Anamnese.value, 
   };
 
   let method = "POST";
