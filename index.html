@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" conteudo="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" conteudo="ie=edge">
+    <meta name="title" content="Odonto Clinic"/>
+    <meta name="description" content="Cuide do seu sorriso com a Odonto Clinic"/>
+	<meta name="keywords" content="HTML, CSS, JavaScript, Code, Database, Programacao, Codigo"/>
+	<meta name="author" content="Edelson Barboza"/>
+	<meta name="og:title" content="Odonto Clinic"/>
+    <title>Odonto Clinic</title>
+
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Import Google Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+
+<body>
+    <!-- Toast (Mensagem) -->
+    <span class="alerta"></span>
+    <!-- Header -->
+    <header>
+        <div class="header">
+            <!-- Logo -->
+            <div class="logo">
+                <span class="material-symbols-outlined">
+                    dentistry
+                </span>
+                <div class="logo-texto">
+                    <h2>Odonto</h2>
+                    <h3>Clinic</h3>
+                </div>
+            </div>
+            <!-- Barra de pesquisa -->
+            <div class="pesquisa">
+                <span class="material-symbols-outlined">search</span>
+                <input type="search" id="" placeholder="Pesquisar">
+            </div>
+            <!-- Usuário do sistema -->
+            <div class="usuario">
+                <img src="./assets/user.jpg"
+                    alt="">
+                <div class="info">
+                    <a href="https://www.linkedin.com/in/edelson-barboza/" target="_blank">Edelson Barboza</a>
+                </div>
+                <span class="material-symbols-outlined">logout</span>
+            </div>
+        </div>
+    </header>    
+    <!-- Menu de navegação -->
+    <nav class="nav_abas">
+        <ul>
+            <!-- Home -->
+            <li>
+                <input class="abas" type="radio" name="tabs" id="aba_home" checked>
+                <label for="aba_home">
+                    <span class="material-symbols-outlined">
+                        home
+                    </span>Home
+                </label>
+                <div class="conteudo">
+                    <article>
+                        <section id="sec_home_consultas" class="w-60">
+                            <h3>Consultas</h3>
+                            <table id="tb_home_consultas">
+                                <thead>
+                                    <tr>
+                                        <th>Paciente</th>
+                                        <th>Telefone</th>
+                                        <th>Data</th>
+                                        <th>Hora</th>
+                                        <th>Procedimento</th>
+                                        <th>Prestador</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </section>
+                        <section id="sec_home_prestadores" class="w-35">
+                            <h3>Prestadores de Serviços</h3>
+                            <table id="tb_home_prestadores">
+                                <thead>
+                                    <tr>
+                                        <th>Prestador</th>
+                                        <th>CRO</th>                                        
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </section>
+                    </article>
+                </div>
+            </li>
+            <!-- Pacientes -->
+            <li>
+                <input class="abas" type="radio" name="tabs" id="aba_paciente">
+                <label for="aba_paciente">
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>Pacientes</label>
+                <div class="conteudo">
+                    <article>
+                        <section id="sec_pacientes" class="w-60">
+                            <h3>Pacientes</h3>
+                            <table id="tb_pacientes">
+                                <thead>
+                                    <tr>
+                                        <th>CPF</th>
+                                        <th>Nome</th>
+                                        <th>Telefone</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </section>
+                        <section id="sec_cae_paciente">
+                            <h3>Cadastro de Paciente</h3>
+                            <form id="form_paciente">
+                                <div class="form-control">
+                                    <div class="input-group">
+                                        <label for="p_nome">Nome Completo</label>
+                                        <input type="text" id="p_nome">
+                                    </div>
+                                </div>
+                                <div class="form-control">
+                                    <div class="input-group">
+                                        <label for="p_cpf">CPF</label>
+                                        <input type="text" id="p_cpf" maxlength="14">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="p_rg">RG</label>
+                                        <input type="text" id="p_rg">
+                                    </div>
+                                </div>
+                                <div class="form-control">
+                                    <div class="input-group">
+                                        <label for="p_endereco">Endereço</label>
+                                        <input type="text" id="p_endereco">
+                                    </div>
+                                </div>
+                                <div class="form-control">
+                                    <div class="input-group col-2">
+                                        <label for="p_telefone">Telefone</label>
+                                        <input type="text" id="p_telefone">
+                                    </div>
+                                    <div class="input-group col-2">
+                                        <label for="p_anamnese">Ficha Anamese</label>
+                                        <input type="text" id="p_anamnese">
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="input-group">
+                                <button id="bt_fechar_p" class="btn fechar">fechar</button>
+                                <button id="bt_salvar_p" class="btn salvar">salvar</button>
+                                <button id="bt_cadastrar_p" class="btn cadastrar">cadastrar</button>                                
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </li>
+            <!-- Consultas -->
+            <li>
+                <input class="abas" type="radio" name="tabs" id="aba_consulta">
+                <label for="aba_consulta">
+                    <span class="material-symbols-outlined">
+                        calendar_month
+                    </span>Consultas
+                </label>
+                <div class="conteudo">
+                    <article>
+                        <section id="sec_consultas" class="">
+                            <h3>Consultas</h3>
+                            <table id="tb_consultas">
+                                <thead>
+                                    <tr>
+                                        <th>Paciente</th>                                        
+                                        <th>Data</th>
+                                        <th>Hora</th>
+                                        <th>Procedimento</th>
+                                        <th>Prestador</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </section>
+                        <section id="sec_ca_consulta" class="w-35">
+                            <h3>Cadastro de Consulta</h3>
+                            <form id="form_consulta">
+                                <div class="form-control">
+                                    <div class="input-group">
+                                        <label id="lbl_cpf_pac" for="cpf_pac">CPF Paciente</label>
+                                        <input type="text" id="cpf_pac" maxlength="14">
+                                    </div>
+                                </div>
+                                <div class="form-control">
+                                    <div class="input-group">
+                                        <label for="c_procedimento">Procedimento</label>
+                                        <input type="text" id="c_procedimento">
+                                    </div>
+                                </div>
+                                <div class="form-control">
+                                    <div class="input-group col-2">
+                                        <label for="c_data">Data</label>
+                                        <input type="text" id="c_data" maxlength="10" placeholder="0000-00-00">
+                                    </div>
+                                    <div class="input-group col-2">
+                                        <label for="c_hora">Hora</label>
+                                        <input type="text" id="c_hora" maxlength="5" placeholder="00:00">
+                                    </div>
+                                </div>
+                                <div class="form-control">
+                                    <div class="input-group">
+                                        <label for="con_pr_cro">CRO</label>
+                                        <input type="text" id="con_pr_cro">
+                                    </div>                                    
+                                </div>
+                            </form>
+                            <div class="input-group">
+                                <button id="bt_salvar_c" class="btn salvar">salvar</button>
+                                <button id="bt_cadastar_c" class="btn cadastrar">cadastrar</button>
+                            </div>
+                        </section>
+                        <!-- Seção para exibir os detalhes da consulta -->
+                        <section id="sec_det_consulta" class="w-35">
+                            <h3>Detalhes da Consulta</h3>
+                            <form>
+                                <div class="form-control">
+                                    <div class="input-group col-2">
+                                        <label for="dc_nome_pac">Paciente</label>
+                                        <input type="text" id="dc_nome_pac" disabled>
+                                    </div>
+                                    <div class="input-group col-2">
+                                        <label for="dc_telefone_pac">Telefone Paciente</label>
+                                        <input type="text" id="dc_telefone_pac" disabled>
+                                    </div>
+                                </div>                                
+                                <div class="form-control">
+                                    <div class="input-group">
+                                        <label for="dc_procedimento">Procedimento</label>
+                                        <input type="text" id="dc_procedimento" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-control">
+                                    <div class="input-group col-2">
+                                        <label for="dc_data">Data</label>
+                                        <input type="text" id="dc_data" disabled>
+                                    </div>
+                                    <div class="input-group col-2">
+                                        <label for="dc_hora">Hora</label>
+                                        <input type="text" id="dc_hora" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-control">
+                                    <div class="input-group col-1">
+                                        <label for="dc_pr_nome">Profissional</label>
+                                        <input type="text" id="dc_pr_nome" disabled>
+                                    </div>                                    
+                                    <div class="input-group col-3">
+                                        <label for="dc_pr_cro">CRO</label>
+                                        <input type="text" id="dc_pr_cro" disabled>
+                                    </div>                                    
+                                </div>
+                            </form>
+                            <div class="input-group">
+                                <button id="bt_fechar_dc" class="btn fechar">fechar</button>                                
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </li>
+            <!-- Prestadores -->
+            <li>
+                <input class="abas" type="radio" name="tabs" id="aba_prestador">
+                <label for="aba_prestador">
+                    <span class="material-symbols-outlined">
+                        oral_disease
+                    </span>Prestador de Serviços
+                </label>
+                <div class="conteudo">
+                    <article>
+                        <section id="sec_prestadores" class="w-60">
+                            <h3>Prestadores de Serviços</h3>
+                            <table id="tb_prestadores">
+                                <thead>
+                                    <tr>
+                                        <th>CPF</th>
+                                        <th>Nome</th>
+                                        <th>CRO</th>
+                                        <th>Telefone</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </section>
+                        <section id="sec_cae_prestador">
+                            <h3>Cadastro de Prestador de Serviços</h3>
+                            <form id="form_prestador">
+                                <div class="form-control">
+                                    <div class="input-group">
+                                        <label for="pr_nome">Nome Completo</label>
+                                        <input type="text" id="pr_nome">
+                                    </div>
+                                </div>
+                                <div class="form-control">
+                                    <div class="input-group">
+                                        <label for="pr_cpf">CPF</label>
+                                        <input type="text" id="pr_cpf" maxlength="14">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="pr_rg">RG</label>
+                                        <input type="text" id="pr_rg">
+                                    </div>
+                                </div>
+                                <div class="form-control">
+                                    <div class="input-group col-2">
+                                        <label for="pr_cro">CRO</label>
+                                        <input type="text" id="pr_cro">
+                                    </div>
+                                    <div class="input-group col-2">
+                                        <label for="pr_telefone">Telefone</label>
+                                        <input type="text" id="pr_telefone">
+                                    </div>
+                                </div>
+                                <div class="form-control">
+                                    <div class="input-group col-2">
+                                        <label for="pr_razao">Razão Social</label>
+                                        <input type="text" id="pr_razao">
+                                    </div>
+                                    <div class="input-group col-2">
+                                        <label for="pr_cnpj">CNPJ</label>
+                                        <input type="text" id="pr_cnpj" maxlength="18">
+                                    </div>
+                                </div>
+                                <div class="form-control">
+                                    <div class="input-group">
+                                        <label for="pr_endereco">Endereço</label>
+                                        <input type="text" name="" id="pr_endereco">
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="input-group">
+                                <button id="bt_fechar_ps" class="btn fechar">fechar</button>
+                                <button id="bt_salvar_ps" class="btn salvar">salvar</button>
+                                <button id="bt_cadastrar_ps" class="btn cadastrar">cadastrar</button>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </li>
+            <!-- Fornecedores -->
+            <li>
+                <input class="abas" type="radio" name="tabs" id="aba_fornecedor">
+                <label for="aba_fornecedor">
+                    <span class="material-symbols-outlined">
+                        medical_services
+                    </span>Fornecedores
+                </label>
+                <div class="conteudo">
+                    <article>
+                        <section id="sec_fornecedores">
+                            <h3>Fornecedores</h3>
+                            <table id="tb_fornecedores">
+                                <thead>
+                                    <tr>
+                                        <th>CNPJ</th>
+                                        <th>Razão Social</th>
+                                        <th>Endereço</th>
+                                        <th>Telefone</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </section>
+                        <section id="sec_cae_fornecedor" class="w-35">
+                            <h3>Cadastro de Fornecedor</h3>
+                            <form id="form_fornecedor">
+                                <div class="form-control">
+                                    <div class="input-group">
+                                        <label for="fr_razao">Razão Social</label>
+                                        <input type="text" id="fr_razao">
+                                    </div>
+                                </div>
+                                <div class="form-control">
+                                    <div class="input-group">
+                                        <label for="fr_cnpj">CNPJ</label>
+                                        <input type="text" id="fr_cnpj" maxlength="18">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="fr_telefone">Telefone</label>
+                                        <input type="text" id="fr_telefone">
+                                    </div>
+                                </div>
+                                <div class="form-control">
+                                    <div class="input-group">
+                                        <label for="fr_endereco">Endereço</label>
+                                        <input type="text" id="fr_endereco">
+                                    </div>                                   
+                                </div>                                
+                            </form>
+                            <div class="input-group">
+                                <button id="bt_fechar_fr" class="btn fechar">fechar</button>
+                                <button id="bt_salvar_fr" class="btn salvar">salvar</button>
+                                <button id="bt_cadastrar_fr" class="btn cadastrar">cadastrar</button>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
