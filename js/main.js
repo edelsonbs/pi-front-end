@@ -1,4 +1,4 @@
-const url = "http://localhost:3000/api"
+const url = "https://odonto-clinic.azurewebsites.net"
 
 // Variável que referencia o elemento de mensagem
 const alerta = document.querySelector(".alerta");
@@ -12,13 +12,6 @@ const secaoCadastroConsulta = document.querySelector("#sec_ca_consulta");
 const secaoDetalheConsulta = document.querySelector("#sec_det_consulta");
 const secaoPrestadores = document.querySelector("#sec_prestadores");
 const secaoFornecedores = document.querySelector("#sec_fornecedores");
-
-// Variáveis que referencia as abas do menu
-const abaHome = document.querySelector("#aba_home");
-const abaPaciente = document.querySelector("#aba_paciente");
-const abaConsulta = document.querySelector("#aba_pconsulta");
-const abaPrestador = document.querySelector("#aba_prestador");
-const abaFornecedor = document.querySelector("#aba_fornecedor");
 
 // Variáveis que referencia os botões 'Cadastrar', 'Salvar' e 'Fechar' da seções
 const btnCadastrarPac = document.querySelector("#bt_cadastrar_p");
