@@ -1,4 +1,4 @@
-const url = "https://odonto-clinic.azurewebsites.net"
+const url = "https://odonto-clinic.azurewebsites.net/api"
 
 // Variável que referencia o elemento de mensagem
 const alerta = document.querySelector(".alerta");
